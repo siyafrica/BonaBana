@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+	<html lang="en">
+		<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    		<meta name="viewport" content="width=device-width, initial-scale=1">
+    		<title>Bona Bana</title>
+
+    		<!-- The CSS goes here -->
+    		<!-- I am using the latest Bootstrap v3.3.1 -->
+    		<link rel="stylesheet" type="text/css" href="dist/css/bootstrap-theme.css">
+    		<link rel="stylesheet" type="text/css" href="dist/css/bootstrap.css">
+    		<link rel="stylesheet" type="text/css" href="dist/css/bootstrap.css.map">
+    		
+    		<!-- This is my own custom CSS for elements not covered by Bootstrap -->
+    		<!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
+
+		</head>
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed dropdown-toggle" data-toggle="collapse dropdown" data-target="#bs-example-navbar-collapse-1">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="http://www.mediamonitoringafrica.org/">
+	      	<img src="img/logo-mma-top.png" alt="MMA logo">
+	      </a>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	      <ul class="nav navbar-nav navbar-right" >
+	        <li class="dropdown btn-group">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+	          	<span class="sr-only">Toggle navigation</span>
+	        	<span class="icon-bar"></span>
+	        	<span class="icon-bar"></span>
+	        	<span class="icon-bar"></span> 
+	        	<span class="caret"></span>
+		          <ul class="dropdown-menu" role="menu">
+		            <li class="active"><a href="#Home">Home</a></li>
+						<li><a href="#Tdrive">The T-Drive</a></li>
+						<li><a href="#Status">The Status of Children</a></li>
+						<li><a href="#WaziChildren">Wazi Children</a></li>		
+						<li><a href="#GapFinder">Gap Finder</a></li>		
+						<li><a href="#Findings">Findings</a></li>		
+						<li><a href="#Footer">Contact Us</a></li>						
+		          </ul>
+	          </a>
+	        </li>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+</nav>
+		<body class="container">
+			<!-- This is the home section of the one page app -->
+			<div id="Home" class="span12">
+				<div id="banner" class="span6">
+					<h1>Bona Bana<img src="img/BB-logo.png" alt="logo"></h1>
+				</div>
+				<div class="span4">
+					<p>Bona Bana is an interactive tool that links and makes comparisons between media coverage of children and available statistics and research on the situation of children in South Africa.</p>
+					<p>Using our media monitoring API, Dexter, Bona Bana keeps tabs on how children and children issues are covered in local media. Scroll down or use the menu to navigate to areas of interest.</p>
+				</div>
+				<div class="buttons">
+					<button><span class="social social-facebook"></span></button>
+					<button><span class="social social-twitter"></span></button>
+					<button><span class="glyphicons glyphicons-envelope"></span></button>
+				</div>
+			</div>
+
+			<!-- -->
+			<div id="Tdrive" class="span12">
+				<div id="banner" class="span3">
+					<h1>The T-Drive</h1>
+				</div>
+				<div class="btn-group">
+				  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+				    Choose Media <span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu" role="menu">
+				    <li><a href="#">City Press</a></li>
+				    <li><a href="#">Mail & Guardian</a></li>
+				    <li><a href="#">The Star</a></li>
+				    <li class="divider"></li>
+				    <li><a href="#">All Media</a></li>
+				  </ul>
+				</div>
+				<div class="span3">
+					<div id="tdrive-all"></div>
+					<div id="tdrive-media"></div>
+				</div>
+				<div class="span12">
+					<div id="tdrive-chart"></div>
+				</div>
+			</div>
+
+			<!-- The status of children shows the population of children in South Africa's 9 provinces vs the number of stories dedicated to them -->
+			<div id="Status" class="span12">
+				<div class="banner">
+					<h1>The Status of Children</h1>
+				</div>
+				<div class="span12">
+					<div id="status-chart"></div>
+				</div>
+			</div>
+
+			<!-- Data on children taken from www.wazimap.co.za -->
+			<div id="WaziChildren" class="span12">
+				<div class="banner">
+					<h1>Wazi Children <img src="img/wazimap-sticker-final copy.png" alt="Wazimap logo"></h1>
+				</div>
+				<div class="span12">
+					<div id="gender-chart"></div>
+					<div id="education-chart"></div>
+					<div id="employment-chart"></div>
+					<div id="parents-chart"></div>
+					<div id="dwelling-chart"></div>
+				</div>
+			</div>
+
+			<!-- The gap finder will show areas that are lacking stories in terms of childrens issues and geographic locations -->
+			<div id="GapFinder" class="span12">
+				<div class="banner">
+					<h1>Gap Finder</h1>
+				</div>
+				<div class="span3">
+					<table id="gap-finder"></table>
+				</div>
+			</div>
+
+			<!-- The MMA findinds for children in the media, they will go into a slideshow -->
+			<div id="Findings" class="span12">
+				<div class="banner">
+					<h1>Findings</h1>
+				</div>
+				<div id="slider">
+				</div>
+
+			</div>
+
+			<!-- The footer with links to our data sources as well as the MMA's contact information -->
+			<footer id="Footer" class="span12">
+				<div>
+					<h4>Resources</h4>
+					<p><a href="http://www.wazimap.co.za">WaziMap</a></p>
+					<p><a href="http://www.mediamonitoringafrica.org">Media Monitoring Africa</a></p>
+				</div>
+
+			</footer>
+
+
+			<!-- I used the Google CDN for jQuery -->
+			<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+			<!-- Here are the links to the Bootstrap JavaScript files -->
+			<script type="text/javascript" src="dist/js/bootstrap.js"></script>
+			
+			<!-- Link to my custom JavaScript file-->
+			<script type="text/javascript" src="lib/app.js"></script>
+		</body>
+
+	</html>
