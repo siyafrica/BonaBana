@@ -6,13 +6,13 @@
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
 body {
   margin: 0;
-  padding: 40px;
+  padding: 100px;
 }
 article,
 aside,
@@ -901,11 +901,11 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
-  background-color: #F0F1F9;
+  background-color: #fff;
 }
 input,
 button,
@@ -1197,7 +1197,14 @@ a.bg-success:hover {
   background-color: #c1e2b3;
 }
 .bg-info {
-  background-color: #d9edf7;
+  background-color: #424AF1;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+.bg-info h1{
+  color: #fff;
 }
 a.bg-info:hover {
   background-color: #afd9ee;
@@ -5089,11 +5096,21 @@ a.list-group-item-danger.active:focus {
   color: inherit;
 }
 .panel-footer {
-  padding: 10px 15px;
-  background-color: #f5f5f5;
+  padding: 50px;
+  background-color: #11178F;
   border-top: 1px solid #ddd;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
+  width: 100%;
+  color: #fff;
+  overflow: auto;
+}
+.panel-footer > .resources {
+  width: 200px;
+  float: right;
+}
+.panel-footer > .contact {
+  width: 300px;
 }
 .panel > .list-group,
 .panel > .panel-collapse > .list-group {
@@ -5593,7 +5610,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 12px;
   font-weight: normal;
   line-height: 1.4;
@@ -5701,7 +5718,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.42857143;
@@ -5958,7 +5975,7 @@ button.close {
   width: 20px;
   height: 20px;
   margin-top: -10px;
-  font-family: serif;
+  font-family: 'Open Sans', sans-serif;
 }
 .carousel-control .icon-prev:before {
   content: '\2039';

@@ -6,3 +6,11 @@ nav {
 	background-color: "#fff";
 	border-radius: 20px;
 }
+
+body.banner {
+	background-color: "#424AF1";
+}
+
+footer .contact {
+	float: right;
+}
