@@ -20,14 +20,14 @@ footer .contact {
 	width: 900px;
 	height: auto;
 }
-#MeterGauge, #MeterGauge2 {
+div#MeterGauge, div#MeterGauge2 {
 	background-color: #fafafa;
 	margin: 0px;
 	padding: 0px;
 }
-#MeterGauge {
+div#MeterGauge {
 	float: left;
 }
-#MeterGauge2 {
+div#MeterGauge2 {
 	float: right;
 }
