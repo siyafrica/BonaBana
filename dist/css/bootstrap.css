@@ -12,7 +12,7 @@ html {
 }
 body {
   margin: 0;
-  padding: 100px;
+  padding-top: 100px;
 }
 article,
 aside,
@@ -1205,6 +1205,7 @@ a.bg-success:hover {
 }
 .bg-info h1{
   color: #fff;
+  position: relative;
 }
 a.bg-info:hover {
   background-color: #afd9ee;

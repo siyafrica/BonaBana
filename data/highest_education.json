@@ -1,0 +1,14 @@
+[
+	{
+		"geo_level" : "country",
+		"geo_code" : "ZA",
+		"geoid" : "country-ZA",
+		"name" : "South Africa",
+		"total" : 2967879,
+		"Discouraged.work.seeker" : 71469,
+		"Employed" : 100680,
+		"Not.applicable" : 0,
+		"Other.not.economically.active" : 2579919,
+		"Unemployed" : 215811
+	}
+]

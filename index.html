@@ -8,6 +8,9 @@
 
     		<!-- The CSS goes here -->
 
+    		<!-- The css for jqplot -->
+			<link rel="stylesheet" type="text/css" href="css/jquery.jqplot.css">
+
     		<!-- The Google Font for the site -->
     		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     		<!-- I am using the latest Bootstrap v3.3.1 -->
@@ -62,8 +65,8 @@
 			<body class="container span12">
 				<!-- This is the home section of the one page app -->
 				<div class="row">
-				<div id="Home" class="">
-					<div class="bg-info">
+				<div id="Home" class="span1 offset6">
+					<div class="bg-info span1">
 						<h1>Bona Bana<img src="img/BB-logo.png" alt="logo"></h1>
 					</div>
 					<div class="span4">
@@ -101,7 +104,11 @@
 							<div id="tdrive-media"></div>
 						</div>
 						<div class="span12">
-							<div id="tdrive-chart"></div>
+							<!-- The meter gauge visualization -->	
+							<div id="T-Drive">
+								<div id="MeterGauge" style="height: 400px; width: 400px"></div>
+								<div id="MeterGauge2" style="height: 400px; width: 400px"></div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -202,6 +209,10 @@
 				<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
 				<!-- Here are the links to the Bootstrap JavaScript files -->
 				<script type="text/javascript" src="dist/js/bootstrap.js"></script>
+
+				<!-- The libraries for jQplot -->
+				<script type="text/javascript" src="lib/jquery.jqplot.js"></script>
+				<script type="text/javascript" src="lib/jqplot.meterGaugeRenderer.js"></script>
 				
 				<!-- Link to my custom JavaScript file-->
 				<script type="text/javascript" src="lib/app.js"></script>

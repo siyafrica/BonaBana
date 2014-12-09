@@ -1,0 +1,12 @@
+[
+	{
+		"geo_level" : "country",
+		"geo_code" : "ZA",
+		"geoid" : "country-ZA",
+		"name" : "South Africa",
+		"total" : 92715,
+		"Female" : 40929,
+		"Male" : 51786,
+		"Unspecified" : 0
+	}
+]
