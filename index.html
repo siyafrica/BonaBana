@@ -9,8 +9,8 @@
     		<!-- The CSS goes here -->
     		<link rel="stylesheet" type="text/css" href="css/style.css">
 
-    		<!-- The css for jqplot -->
-			<link rel="stylesheet" type="text/css" href="css/jquery.jqplot.css">
+    		<!-- The CSS for C3 -->
+			<link rel="stylesheet" type="text/css" href="css/c3.css">
 
     		<!-- The Google Font for the site -->
     		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
@@ -143,20 +143,89 @@
 						<div class="bg-info">
 							<h1>Wazi Children <img src="img/wazimap-sticker.png" alt="Wazimap logo"></h1>
 						</div>
-						<ul class="nav nav-tabs">
-							<li class="active"><a href="#">Gender</a></li>
-							<li><a href="#">Education</a></li>
-							<li><a href="#">Employment</a></li>
-							<li><a href="#">Parents</a></li>
-							<li><a href="#">Dwellings</a></li>
-						</ul>
-						<div class="span12">
-							<div id="gender-chart"></div>
-							<div id="education-chart"></div>
-							<div id="employment-chart"></div>
-							<div id="parents-chart"></div>
-							<div id="dwelling-chart"></div>
-						</div>
+						<article id="wazi-children" class="clearfix">
+				
+				<!-- Population data on children -->
+				<section id="population" class="clearfix">
+					<div class="column-third">
+						<h3>Child population</h3>
+						<p><h3>18 067 972</h3><br> Children</p>
+					</div>
+					<div class="population_age">
+					</div>
+					<div class="population_gender">
+					</div><br><br>
+				</section>
+
+				<!-- Parental data on children -->
+				<section id="parents" class="clearfix">
+					<div class="text">
+						<h3>Parents</h3>
+						<p><h2>4.6%</h2>Of children and under have no living biological parents</p>
+					</div>
+					<div class="parents_alive"></div><br><br>
+				</section>
+
+				<!-- Education data -->
+				<section id="education" class="clearfix">
+					<div id="text">
+						<h3>School Attendance</h3>
+						<p><h2>90.1%</h2> School-aged children (5 to 17 years old) are in school</p>
+					</div>
+					<div class="school_attendance"></div><br><br>
+					<p>17-year olds by highest educational level</p>
+					<div class="education_level"></div><br>
+				</section>
+
+				<!-- Employment data -->
+				<section id="employment" class="clearfix">
+					<div class=text>
+						<h3>Employment of 15- to 17-year olds</h3>
+						<p><h2>R200</h2> Average monthly income of employed children between 15 and 17</p>
+					</div>
+					<div class="text-middle">
+						<p><h2>13.1%</h2> Of children 15 and 17 are in the labor force</p>
+					</div>
+					<div class="employment_status"></div><br>
+				</section>
+
+				<!-- Child-head households -->
+				<section id="child_households" class="clearfix">
+					<div class=text>
+						<h3>Households headed by children under 18 years old</h3>
+						<p><h2>92 715</h2> Households with heads under 18 years old</p>
+						<p class="text-middle"><h2>10.8%</h2> Child-headed households that are informal dwellings (shacks)</p>
+					</div>
+					<div class="household_size"></div>
+				</section>
+
+				<!-- Head of Household -->
+				<section id="household-gender" class="clearfix">
+					<div class="text">
+						<h3>Head of Household</h3>
+						<p><h2>44.1%</h2> Child-headed households with women as their head</p>
+					</div>
+					<div class="household_gender"></div>
+				</section>
+
+				<!-- Household income -->
+				<section id="household-income" class="clearfix">
+					<div class="text">
+						<h3>Annual household income</h3>
+						<p><h2>R2 400</h2> Average annual child-headed houshold income</p>
+					</div>
+					<div class="household_income"></div>
+				</section>
+
+				<!-- Household size by age -->
+				<section id="household-size" class="clearfix">
+					<div class="text">
+						<h3>Household size</h3>
+						<p>Size of household by age of household head</p>
+					</div>
+					<div class="household_age"></div>
+				</section>
+			</article>
 					</div>
 				</div>
 
@@ -222,9 +291,9 @@
 				<!-- Here are the links to the Bootstrap JavaScript files -->
 				<script type="text/javascript" src="dist/js/bootstrap.js"></script>
 
-				<!-- The libraries for jQplot -->
-				<script type="text/javascript" src="lib/jquery.jqplot.js"></script>
-				<script type="text/javascript" src="lib/jqplot.meterGaugeRenderer.js"></script>
+				<!-- The libraries for the C3 charts -->
+				<script type="text/javascript" src="lib/d3.js"></script>
+				<script type="text/javascript" src="lib/c3.js"></script>
 				
 				<!-- Link to my custom JavaScript file-->
 				<script type="text/javascript" src="lib/app.js"></script>

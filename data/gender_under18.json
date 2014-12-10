@@ -4,9 +4,8 @@
 		"geo_code" : "ZA",
 		"geoid" : "country-ZA",
 		"name" : "South Africa",
-		"total" : 12382519,
-		"No" : 810437,
-		"Other" : 415853,
-		"Yes" : 11156229
+		"total" : 18067972,
+		"Female" : 8947313,
+		"Male" : 9120659
 	}
 ]

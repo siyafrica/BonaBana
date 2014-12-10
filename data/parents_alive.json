@@ -5,8 +5,8 @@
 		"geoid" : "country-ZA",
 		"name" : "South Africa",
 		"total" : 15100092,
-		"Both.parents" : 12009012,
-		"Neither.parent..or.uncertain." : 694989,
-		"One.parent" : 2396091
+		"Both parents" : 12009012,
+		"Neither parent (or.uncertain)" : 694989,
+		"One parent" : 2396091
 	}
 ]
