@@ -23,7 +23,8 @@
     		<!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
 
 		</head>
-		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 	  <div class="container-fluid">
 	    <!-- Brand and toggle get grouped for better mobile display -->
 	    <div class="navbar-header">
@@ -63,35 +64,42 @@
 	  </div><!-- /.container-fluid -->
 </nav>
 		<div class="row">
-			<body class="container span12">
+			<body class="container">
+				
 				<!-- This is the home section of the one page app -->
 				<div class="row">
-				<div id="Home" class="span1 offset6">
-					<div class="bg-info span1">
-						<h1>Bona Bana<img src="img/BB-logo.png" alt="logo"></h1>
+					<div id="Home" class="col-md-12">
+						<div class="bg-info col-md-4 col-md-offset-4">
+							<h1>Bona Bana<img src="img/BB-logo.png" alt="logo"></h1>
+						</div>
+						<div class="clearfix"></div>
+						<div class="col-md-8 col-md-offset-2">
+							<p>
+								Bona Bana is an interactive tool that links and makes comparisons between media coverage of children and available statistics and research on the situation of children in South Africa.
+							</p>
+							<p>
+								Using our media monitoring API, Dexter, Bona Bana keeps tabs on how children and children issues are covered in local media. Scroll down or use the menu to navigate to areas of interest.
+							</p>
+							<div class="buttons col-md-12">
+								<button><span class="social social-facebook"></span></button>
+								<button><span class="social social-twitter"></span></button>
+								<button><span class="glyphicons glyphicons-envelope"></span></button>
+							</div>
+						</div>
 					</div>
-					<div class="span4">
-						<p>Bona Bana is an interactive tool that links and makes comparisons between media coverage of children and available statistics and research on the situation of children in South Africa.</p>
-						<p>Using our media monitoring API, Dexter, Bona Bana keeps tabs on how children and children issues are covered in local media. Scroll down or use the menu to navigate to areas of interest.</p>
-					</div>
-					<div class="buttons">
-						<button><span class="social social-facebook"></span></button>
-						<button><span class="social social-twitter"></span></button>
-						<button><span class="glyphicons glyphicons-envelope"></span></button>
-					</div>
-				</div>
 				</div>
 
 				<!-- The T Drive-->
 				<div class="row">
-					<div id="Tdrive" class="span12">
-						<div class="bg-info">
+					<div id="Tdrive" class="col-md-12">
+						<div class="bg-info col-md-4 col-md-offset-4">
 							<h1>The T-Drive</h1>
 						</div>
-						<div class="btn-group">
+						<div class="btn-group col-md-4 col-md-offset-4">
 						  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 						    Choose Media <span class="caret"></span>
 						  </button>
+						  <div class="clearfix"></div>
 						  <ul class="dropdown-menu" role="menu">
 						    <li class="Beeld"><a href="#">Beeld</a></li>
 						    <li class="Business_Day"><a href="#">Business Day</a></li>
@@ -111,14 +119,14 @@
 						    <li class="All_Media"><a href="#">All Media</a></li>
 						  </ul>
 						</div>
-						<div class="span4">
+						<div class="col-md-12">
 							<!-- The meter gauge visualization -->	
 							<div id="T-Drive" class="clearfix">
 								<div id="MeterGauge" style="height: 400px; width: 400px"></div>
 								<div id="MeterGauge2" style="height: 400px; width: 400px"></div>
 							</div>
 						</div>
-						<div id="T-Drive-chart" class="span8 clearfix">
+						<div id="T-Drive-chart" class="col-md-12 clearfix">
 							<div class="T-Drive-Chart"></div>
 						</div>
 					</div>
@@ -126,11 +134,11 @@
 
 				<!-- The status of children shows the population of children in South Africa's 9 provinces vs the number of stories dedicated to them -->
 				<div class="row">
-					<div id="Status" class="span12">
-						<div class="bg-info">
+					<div id="Status" class="col-md-12">
+						<div class="bg-info col-md-4 col-md-offset-4">
 							<h1>The Status of Children</h1>
 						</div>
-						<div class="span12">
+						<div class="col-md-12">
 							<div class="children_status"></div>
 						</div>
 					</div>
@@ -138,93 +146,110 @@
 
 					<!-- Data on children taken from www.wazimap.co.za -->
 				<div class="row">
-					<div id="WaziChildren" class="span12">
-						<div class="bg-info">
+					<div id="WaziChildren" class="col-md-12">
+						<!-- The logo -->
+						<div class="bg-info col-md-4 col-md-offset-4">
 							<h1>Wazi Children <img src="img/wazimap-sticker.png" alt="Wazimap logo"></h1>
 						</div>
-						<article id="wazi-children" class="clearfix">
-				
-				<!-- Population data on children -->
-				<section id="population" class="clearfix">
-					<div class="column-third">
-						<h3>Child population</h3>
-						<p><h3>18 067 972</h3><br> Children</p>
-					</div>
-					<div class="population_age">
-					</div>
-					<div class="population_gender">
-					</div><br><br>
-				</section>
+							
+							<!-- Population data on children -->
+							<div id="population" class="col-md-12">
+								<h3>Child population</h3>
+								<div class="col-md-4">
+									<p>
+										<h3>18 067 972</h3> Children reside in South Africa
+									</p>
+								</div>
+								<div class="population_age"></div>
+								<div class="population_gender"></div>
+							</div>
+						<div class="divider col-md-12"></div>
+							<!-- Parental data on children -->
+							<div id="parents" class="col-md-12">
+								<h3>Parents</h3>
+								<div class="col-md-4">
+									<p>
+										<h2>4.6%</h2>Of children and under have no living biological parents
+									</p>
+								</div>
+								<div class="parents_alive"></div>
+							</div>
 
-				<!-- Parental data on children -->
-				<section id="parents" class="clearfix">
-					<div class="text">
-						<h3>Parents</h3>
-						<p><h2>4.6%</h2>Of children and under have no living biological parents</p>
-					</div>
-					<div class="parents_alive"></div><br><br>
-				</section>
+							<!-- Education data -->
+							<div id="education" class="col-md-12">
+								<h3>School Attendance</h3>
+								<div class="col-md-4">
+									<p>
+										<h2>90.1%</h2> School-aged children (5 to 17 years old) are in school
+									</p>
+								</div>
+								<div class="school_attendance"></div>
+								<p>17-year olds by highest educational level</p>
+								<div class="education_level"></div><br>
+							</div>
 
-				<!-- Education data -->
-				<section id="education" class="clearfix">
-					<div id="text">
-						<h3>School Attendance</h3>
-						<p><h2>90.1%</h2> School-aged children (5 to 17 years old) are in school</p>
-					</div>
-					<div class="school_attendance"></div><br><br>
-					<p>17-year olds by highest educational level</p>
-					<div class="education_level"></div><br>
-				</section>
+							<!-- Employment data -->
+							<div id="employment" class="col-md-12">
+								<h3>Employment of 15- to 17-year olds</h3>
+								<div class="col-md-4">
+									<p><h2>R200</h2> Average monthly income of employed children between 15 and 17</p>
+								</div>
+								<div class="col-md-4">
+									<p><h2>13.1%</h2> Of children 15 and 17 are in the labor force</p>
+								</div>
+								<div class="employment_status"></div><br>
+							</div>
 
-				<!-- Employment data -->
-				<section id="employment" class="clearfix">
-					<div class=text>
-						<h3>Employment of 15- to 17-year olds</h3>
-						<p><h2>R200</h2> Average monthly income of employed children between 15 and 17</p>
-					</div>
-					<div class="text-middle">
-						<p><h2>13.1%</h2> Of children 15 and 17 are in the labor force</p>
-					</div>
-					<div class="employment_status"></div><br>
-				</section>
+							<!-- Child-head households -->
+							<div id="child_households" class="col-md-12">
+								<h3>Households headed by children under 18 years old</h3>
+								<div class="col-md-4">
+									<p>
+										<h2>92 715</h2> Households with heads under 18 years old
+									</p>
+								</div>
+								<div class="col-md-4">
+										<p>
+											<h2>10.8%</h2> Child-headed households that are informal dwellings (shacks)
+										</p>
+								</div>
+								<div class="household_size"></div>
+							</div>
 
-				<!-- Child-head households -->
-				<section id="child_households" class="clearfix">
-					<div class=text>
-						<h3>Households headed by children under 18 years old</h3>
-						<p><h2>92 715</h2> Households with heads under 18 years old</p>
-						<p class="text-middle"><h2>10.8%</h2> Child-headed households that are informal dwellings (shacks)</p>
-					</div>
-					<div class="household_size"></div>
-				</section>
+							<!-- Head of Household -->
+							<div id="household-gender" class="col-md-12">
+								<h3>Head of Household</h3>
+								<div class="col-md-4">
+									<p>
+										<h2>44.1%</h2> Child-headed households with women as their head
+									</p>
+								</div>
+								<div class="household_gender"></div>
+							</div>
 
-				<!-- Head of Household -->
-				<section id="household-gender" class="clearfix">
-					<div class="text">
-						<h3>Head of Household</h3>
-						<p><h2>44.1%</h2> Child-headed households with women as their head</p>
-					</div>
-					<div class="household_gender"></div>
-				</section>
+							<!-- Household income -->
+							<div id="household-income" class="col-md-12">
+								<h3>Annual household income</h3>
+								<div class="col-md-4">
+									<p>
+										<h2>R2 400</h2> Average annual child-headed houshold income
+									</p>
+								</div>
+								<div class="col-md-12">
+									<div class="household_income"></div>
+								</div>
+							</div>
 
-				<!-- Household income -->
-				<section id="household-income" class="clearfix">
-					<div class="text">
-						<h3>Annual household income</h3>
-						<p><h2>R2 400</h2> Average annual child-headed houshold income</p>
-					</div>
-					<div class="household_income"></div>
-				</section>
-
-				<!-- Household size by age -->
-				<section id="household-size" class="clearfix">
-					<div class="text">
-						<h3>Household size</h3>
-						<p>Size of household by age of household head</p>
-					</div>
-					<div class="household_age"></div>
-				</section>
-			</article>
+							<!-- Household size by age -->
+							<div id="household-size" class="col-md-12">
+								<h3>Household size</h3>
+								<div class="col-md-4">
+									<p>Size of household by age of household head</p>
+								</div>
+								<div class="col-md-12">
+									<div class="household_age"></div>
+								</div>
+							</div>
 					</div>
 				</div>
 
@@ -297,5 +322,4 @@
 				<!-- Link to my custom JavaScript file-->
 				<script type="text/javascript" src="lib/app.js"></script>
 			</body>
-		</div>
 	</html>
