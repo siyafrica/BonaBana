@@ -12,6 +12,9 @@
     		<!-- The CSS for C3 -->
 			<link rel="stylesheet" type="text/css" href="css/c3.css">
 
+			<!-- The CSS for Dynatable -->
+			<link rel="stylesheet" type="text/css" href="css/jquery.dynatable.css">
+
     		<!-- The Google Font for the site -->
     		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     		<!-- I am using the latest Bootstrap v3.3.1 -->
@@ -62,8 +65,7 @@
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
-</nav>
-		<div class="row">
+	</nav>
 			<body class="container">
 				
 				<!-- This is the home section of the one page app -->
@@ -72,7 +74,6 @@
 						<div class="bg-info col-md-4 col-md-offset-4">
 							<h1>Bona Bana<img src="img/BB-logo.png" alt="logo"></h1>
 						</div>
-						<div class="clearfix"></div>
 						<div class="col-md-8 col-md-offset-2">
 							<p>
 								Bona Bana is an interactive tool that links and makes comparisons between media coverage of children and available statistics and research on the situation of children in South Africa.
@@ -91,11 +92,19 @@
 
 				<!-- The T Drive-->
 				<div class="row">
-					<div id="Tdrive" class="col-md-12">
+					<div class="col-md-12">
 						<div class="bg-info col-md-4 col-md-offset-4">
 							<h1>The T-Drive</h1>
 						</div>
-						<div class="btn-group col-md-4 col-md-offset-4">
+						<div class="col-md-8 col-md-offset-2">
+							<p>
+								The T-Drive is our interactive tool that is driven by our media monitoring project Dexter. The T-Drive allows you to see how news media is performing in its coverage of children.
+							</p>
+							<p>
+								With the T-Drive you can see the performance of media's coverage of children as a whole or you can compare individual news media to the industry.
+							</p>
+						</div>
+						<div class="btn-group col-md-3 col-md-offset-5">
 						  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 						    Choose Media <span class="caret"></span>
 						  </button>
@@ -121,12 +130,12 @@
 						</div>
 						<div class="col-md-12">
 							<!-- The meter gauge visualization -->	
-							<div id="T-Drive" class="clearfix">
+							<div class="col-md-12">
 								<div id="MeterGauge" style="height: 400px; width: 400px"></div>
 								<div id="MeterGauge2" style="height: 400px; width: 400px"></div>
 							</div>
 						</div>
-						<div id="T-Drive-chart" class="col-md-12 clearfix">
+						<div id="T-Drive-chart" class="col-md-8 col-md-offset-2">
 							<div class="T-Drive-Chart"></div>
 						</div>
 					</div>
@@ -138,7 +147,12 @@
 						<div class="bg-info col-md-4 col-md-offset-4">
 							<h1>The Status of Children</h1>
 						</div>
-						<div class="col-md-12">
+						<div class="col-md-8 col-md-offset-2">
+							<p>
+								You can see the status of children in South Africa in terms of their population per province and the number of stories written about them per province by clicking on the fields "Stories" and "Population".
+							</p>
+						</div>
+						<div class="col-md-8 col-md-offset-2">
 							<div class="children_status"></div>
 						</div>
 					</div>
@@ -151,7 +165,9 @@
 						<div class="bg-info col-md-4 col-md-offset-4">
 							<h1>Wazi Children <img src="img/wazimap-sticker.png" alt="Wazimap logo"></h1>
 						</div>
-							
+							<div class="col-md-8 col-md-offset-2">
+								<p>Wazi Children comprises of data on children in South Africa taken from our other data driven project <a href="http://www.wazimap.co.za">Wazimap</a>.</p>
+							</div>
 							<!-- Population data on children -->
 							<div id="population" class="col-md-12">
 								<h3>Child population</h3>
@@ -160,8 +176,12 @@
 										<h3>18 067 972</h3> Children reside in South Africa
 									</p>
 								</div>
-								<div class="population_age"></div>
-								<div class="population_gender"></div>
+								<div class="col-md-4">
+									<div class="population_age"></div>
+								</div>
+								<div class="col-md-4">
+									<div class="population_gender"></div>
+								</div>
 							</div>
 						<div class="divider col-md-12"></div>
 							<!-- Parental data on children -->
@@ -253,21 +273,31 @@
 					</div>
 				</div>
 
-				<!-- The gap finder will show areas that are lacking stories in terms of childrens issues and geographic locations -->
+				<!-- The gap finder will show areas that are lacking stories in terms of childrens issues and geographic locations - I built the table using this library http://www.dynatable.com/?perPage=20&queries[search]=Qatar#json-from-ajax -->
 				<div class="row">
-					<div id="GapFinder" class="span12">
-						<div class="bg-info">
+					<div id="GapFinder" class="col-md-12">
+						<div class="bg-info col-md-4 col-md-offset-4">
 							<h1>Gap Finder</h1>
 						</div>
-						<div class="span3">
-							<table id="gap-finder"></table>
+						<div class="col-md-8 col-md-offset-2">
+							<caption>
+									With the Gap Finder you can find geographic areas and issues that are not being covered in terms of children.
+							</caption>
+							<table id="gap-finder" class="table">
+								<thead>
+									<th>Province</th>
+									<th>Issue</th>
+								</thead>
+								<tbody>
+								</tbody>
+							</table>
 						</div>
 					</div>
 				</div>
 				<!-- The MMA findinds for children in the media, they will go into a slideshow -->
 				<div class="row">
-					<div id="Findings" class="span12">
-						<div class="bg-info">
+					<div id="Findings" class="col-md-12">
+						<div class="bg-info col-md-4 col-md-offset-4">
 							<h1>Findings</h1>
 						</div>
 						<div id="slider">
@@ -318,6 +348,9 @@
 				<!-- The libraries for the C3 charts -->
 				<script type="text/javascript" src="lib/d3.js"></script>
 				<script type="text/javascript" src="lib/c3.js"></script>
+
+				<!-- The Dynatable library I used for Gap Finder -->
+				<script type="text/javascript" src="lib/jquery.dynatable.js"></script>
 				
 				<!-- Link to my custom JavaScript file-->
 				<script type="text/javascript" src="lib/app.js"></script>
