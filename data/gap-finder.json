@@ -1,0 +1,38 @@
+[
+		{
+			"Province": "Gauteng",
+			"Issue": "Health"
+		},
+		{
+			"Province": "Mpumalanga",
+			"Issue": "Education"
+			},
+		{
+			"Province": "North West",
+			"Issue": "Human Rights"
+			},
+		{
+			"Province": "Free State",
+			"Issue": "Crime"
+			},
+		{
+			"Province": "Limpopo",
+			"Issue": "Health"
+			},
+		{
+			"Province": "Northern Cape",
+			"Issue": "Education"
+			},
+		{
+			"Province": "Western Cape",
+			"Issue": "Crime"
+			},
+		{
+			"Province": "KwaZulu-Natal",
+			"Issue": "Education"
+			},
+		{
+			"Province": "Eastern Cape",
+			"Issue": "Health"
+		}	
+	]

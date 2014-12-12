@@ -1,0 +1,14 @@
+[
+	{
+		"geo_level" : "country",
+		"geo_code" : "ZA",
+		"geoid" : "country-ZA",
+		"name" : "South Africa",
+		"total" : 92718,
+		"Apartment" : 3189,
+		"House" : 58206,
+		"Shack": 9975,
+		"Other" : 4830,
+		"Traditional" : 16518
+	}
+]

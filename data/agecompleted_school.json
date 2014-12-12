@@ -1,0 +1,12 @@
+[
+	{
+		"geo_level" : "country",
+		"geo_code" : "ZA",
+		"geoid" : "country-ZA",
+		"name" : "South Africa",
+		"total" : 12382519,
+		"No" : 810437,
+		"Other" : 415853,
+		"Yes" : 11156229
+	}
+]

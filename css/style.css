@@ -1,0 +1,60 @@
+nav {
+	color: #11178F;
+}
+
+.navbar-brand img {
+	background-color: "#fff";
+	border-radius: 10px;
+}
+
+body.banner {
+	background-color: "#424AF1";
+}
+
+footer .contact {
+	float: right;
+}
+
+/* the CSS for the T-Drive */
+#T-Drive {
+	width: 900px;
+	height: auto;
+}
+div#MeterGauge, div#MeterGauge2 {
+	background-color: #fafafa;
+	margin: 0px;
+	padding: 0px;
+}
+div#MeterGauge {
+	float: left;
+}
+div#MeterGauge2 {
+	float: right;
+}
+.clearfix {
+	overflow: auto;
+}
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.column-third {
+	width: 31%;
+	margin: 0 2% 0 0;
+}
+
+.population_age.c3  
+.parents_alive.c3 
+.employment_status.c3 
+.school_attendance.c3
+.household_size.c3
+.text-middle {
+	float: right;
+}
+
+.population_gender.c3
+.text-middle {
+	float: left;
+}

@@ -1,0 +1,26 @@
+[
+	{
+		"Topic" : "Topic: Education",
+		"Score" : 25
+	},
+	{
+		"Topic" : "Diversity: Gauteng",
+		"Score" : 30
+	},
+	{
+		"Topic" : "Rights: Privacy",
+		"Score" : 80
+	},
+	{
+		"Topic" : "Issues: Context indepth",
+		"Score" : 60
+	},
+	{
+		"Topic" : "Voices of Children",
+		"Score" : 7
+	},
+	{
+		"Topic" : "Ethics: Child Best Interest",
+		"Score" : 90
+	}
+]

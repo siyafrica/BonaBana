@@ -1,0 +1,21 @@
+[
+	{
+		"geo_level" : "country",
+		"geo_code" : "ZA",
+		"geoid" : "country-ZA",
+		"name" : "South Africa",
+		"total" : 92715,
+		"R0" : 36561,
+		"Under R4800" : 16434,
+		"R5k - R10k" : 17895,
+		"R10k - R20k" : 10359,
+		"R20k - R40k" : 5439,
+		"R40k - R75k" : 2289,
+		"R75k - R150k" : 1620,
+		"R150k - R300k" : 1149,
+		"R300k - R600k" : 612,
+		"R600k - R1.2M" : 180,
+		"R1.2M - R2.5M" : 114,
+		"Over R2.5M" : 60
+	}
+]

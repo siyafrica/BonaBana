@@ -1,0 +1,365 @@
+<!DOCTYPE HTML>
+	<html lang="en">
+		<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    		<meta name="viewport" content="width=device-width, initial-scale=1">
+    		<title>Bona Bana</title>
+
+    		<!-- The CSS goes here -->
+    		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+    		<!-- The CSS for C3 -->
+			<link rel="stylesheet" type="text/css" href="css/c3.css">
+
+			<!-- The CSS for Dynatable -->
+			<link rel="stylesheet" type="text/css" href="css/jquery.dynatable.css">
+
+    		<!-- The Google Font for the site -->
+    		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    		<!-- I am using the latest Bootstrap v3.3.1 -->
+    		<!-- Latest compiled and minified CSS -->
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+			<!-- Optional theme -->
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+    		<link rel="stylesheet" type="text/css" href="dist/css/bootstrap.css.map">
+    		<link rel="stylesheet" type="text/css" href="css/bootstrap-social.css">
+
+    		<!-- link to the Font awesome CDN which I used for the glyphicons -->
+    		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+		</head>
+
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed dropdown-toggle" data-toggle="collapse dropdown" data-target="#bs-example-navbar-collapse-1">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="http://www.mediamonitoringafrica.org/">
+	      	<img src="img/logo-mma-top.png" alt="MMA logo" class="img-thumbnail">
+	      </a>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	      <ul class="nav navbar-nav navbar-right" >
+	        <li class="dropdown btn-group">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+	          	<span class="sr-only">Menu</span>
+	        	<span class="icon-bar"></span>
+	        	<span class="icon-bar"></span>
+	        	<span class="icon-bar"></span> 
+	        	<span class="caret"></span>
+		          <ul class="dropdown-menu" role="menu">
+		            <li class="active"><a href="#Home">Home</a></li>
+						<li><a href="#Tdrive">The T-Drive</a></li>
+						<li><a href="#Status">The Status of Children</a></li>
+						<li><a href="#WaziChildren">Wazi Children</a></li>		
+						<li><a href="#GapFinder">Gap Finder</a></li>		
+						<li><a href="#Findings">Findings</a></li>		
+						<li><a href="#Footer">Contact Us</a></li>						
+		          </ul>
+	          </a>
+	        </li>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+			<body class="container">
+				
+				<!-- This is the home section of the one page app -->
+				<div class="row">
+					<div id="Home" class="col-md-12">
+						<div class="bg-info col-md-4 col-md-offset-4">
+							<h1>Bona Bana<img src="img/BB-logo.png" alt="logo"></h1>
+						</div>
+						<div class="col-md-8 col-md-offset-2">
+							<p>
+								Bona Bana is an interactive tool that links and makes comparisons between media coverage of children and available statistics and research on the situation of children in South Africa.
+							</p>
+							<p>
+								Using our media monitoring API, Dexter, Bona Bana keeps tabs on how children and children issues are covered in local media. Scroll down or use the menu to navigate to areas of interest.
+							</p>
+							<div class="buttons col-md-8 col-md-offset-3">
+								<a class="btn btn-social btn-facebook">
+									<i class="fa fa-facebook"> <br>Share with your friends</i>
+								</a>
+								<a class="btn btn-social btn-twitter">
+									<i class="fa fa-twitter"> <br>Tweet your colleagues</i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- The T Drive-->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="bg-info col-md-4 col-md-offset-4">
+							<h1>The T-Drive</h1>
+						</div>
+						<div class="col-md-8 col-md-offset-2">
+							<p>
+								The T-Drive is our interactive tool that is driven by our media monitoring project Dexter. The T-Drive allows you to see how news media is performing in its coverage of children.
+							</p>
+							<p>
+								With the T-Drive you can see the performance of media's coverage of children as a whole or you can compare individual news media to the industry.
+							</p>
+						</div>
+						<div class="btn-group col-md-3 col-md-offset-5">
+						  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+						    Choose Media <span class="caret"></span>
+						  </button>
+						  <div class="clearfix"></div>
+						  <ul class="dropdown-menu" role="menu">
+						    <li class="Beeld"><a href="#">Beeld</a></li>
+						    <li class="Business_Day"><a href="#">Business Day</a></li>
+						    <li class="City_Press"><a href="#">City Press</a></li>
+						    <li class="Daily_Sun"><a href="#">Daily Sun</a></li>
+						    <li class="Mail_and_Guardian"><a href="#">Mail & Guardian</a></li>
+						    <li class="New_Age"><a href="#">The New Age</a></li>
+						    <li class="Rapport"><a href="#">Rapport</a></li>
+						    <li class="Sondag"><a href="#">Sondag</a></li>
+						    <li class="Sowetan"><a href="#">Sowetan</a></li>
+						    <li class="The_Star"><a href="#">The Star</a></li>
+						    <li class="Sunday_Independent"><a href="#">Sunday Independent</a></li>
+						    <li class="Sunday_Times"><a href="#">Sunday Times</a></li>
+						    <li class="Sunday_Sun"><a href="#">Sunday Sun</a></li>
+						    <li class="Sunday_World"><a href="#">Sunday World</a></li>
+						    <li class="divider"></li>
+						    <li class="All_Media"><a href="#">All Media</a></li>
+						  </ul>
+						</div>
+						<div class="col-md-12">
+							<!-- The meter gauge visualization -->	
+							<div class="col-md-12">
+								<div id="MeterGauge" style="height: 400px; width: 400px"></div>
+								<div id="MeterGauge2" style="height: 400px; width: 400px"></div>
+							</div>
+						</div>
+						<div id="T-Drive-chart" class="col-md-8 col-md-offset-2">
+							<div class="T-Drive-Chart"></div>
+						</div>
+					</div>
+				</div>
+
+				<!-- The status of children shows the population of children in South Africa's 9 provinces vs the number of stories dedicated to them -->
+				<div class="row">
+					<div id="Status" class="col-md-12">
+						<div class="bg-info col-md-4 col-md-offset-4">
+							<h1>The Status of Children</h1>
+						</div>
+						<div class="col-md-8 col-md-offset-2">
+							<p>
+								You can see the status of children in South Africa in terms of their population per province and the number of stories written about them per province by clicking on the fields "Stories" and "Population".
+							</p>
+						</div>
+						<div class="col-md-8 col-md-offset-2">
+							<div class="children_status"></div>
+						</div>
+					</div>
+				</div>
+
+					<!-- Data on children taken from www.wazimap.co.za -->
+				<div class="row">
+					<div id="WaziChildren" class="col-md-12">
+						<!-- The logo -->
+						<div class="bg-info col-md-4 col-md-offset-4">
+							<h1>Wazi Children <img src="img/wazimap-sticker.png" alt="Wazimap logo"></h1>
+						</div>
+							<div class="col-md-8 col-md-offset-2">
+								<p>Wazi Children comprises of data on children in South Africa taken from our other data driven project <a href="http://www.wazimap.co.za">Wazimap</a>.</p>
+							</div>
+							<!-- Population data on children -->
+							<div id="population" class="col-md-12">
+								<h3>Child population</h3>
+								<div class="col-md-4">
+									<p>
+										<h3>18 067 972</h3> Children reside in South Africa
+									</p>
+								</div>
+								<div class="col-md-4">
+									<div class="population_age"></div>
+								</div>
+								<div class="col-md-4">
+									<div class="population_gender"></div>
+								</div>
+							</div>
+						<div class="divider col-md-12"></div>
+							<!-- Parental data on children -->
+							<div id="parents" class="col-md-12">
+								<h3>Parents</h3>
+								<div class="col-md-4">
+									<p>
+										<h2>4.6%</h2>Of children and under have no living biological parents
+									</p>
+								</div>
+								<div class="parents_alive"></div>
+							</div>
+
+							<!-- Education data -->
+							<div id="education" class="col-md-12">
+								<h3>School Attendance</h3>
+								<div class="col-md-4">
+									<p>
+										<h2>90.1%</h2> School-aged children (5 to 17 years old) are in school
+									</p>
+								</div>
+								<div class="school_attendance"></div>
+								<p>17-year olds by highest educational level</p>
+								<div class="education_level"></div><br>
+							</div>
+
+							<!-- Employment data -->
+							<div id="employment" class="col-md-12">
+								<h3>Employment of 15- to 17-year olds</h3>
+								<div class="col-md-4">
+									<p><h2>R200</h2> Average monthly income of employed children between 15 and 17</p>
+								</div>
+								<div class="col-md-4">
+									<p><h2>13.1%</h2> Of children 15 and 17 are in the labor force</p>
+								</div>
+								<div class="employment_status"></div><br>
+							</div>
+
+							<!-- Child-head households -->
+							<div id="child_households" class="col-md-12">
+								<h3>Households headed by children under 18 years old</h3>
+								<div class="col-md-4">
+									<p>
+										<h2>92 715</h2> Households with heads under 18 years old
+									</p>
+								</div>
+								<div class="col-md-4">
+										<p>
+											<h2>10.8%</h2> Child-headed households that are informal dwellings (shacks)
+										</p>
+								</div>
+								<div class="household_size"></div>
+							</div>
+
+							<!-- Head of Household -->
+							<div id="household-gender" class="col-md-12">
+								<h3>Head of Household</h3>
+								<div class="col-md-4">
+									<p>
+										<h2>44.1%</h2> Child-headed households with women as their head
+									</p>
+								</div>
+								<div class="household_gender"></div>
+							</div>
+
+							<!-- Household income -->
+							<div id="household-income" class="col-md-12">
+								<h3>Annual household income</h3>
+								<div class="col-md-4">
+									<p>
+										<h2>R2 400</h2> Average annual child-headed houshold income
+									</p>
+								</div>
+								<div class="col-md-12">
+									<div class="household_income"></div>
+								</div>
+							</div>
+
+							<!-- Household size by age -->
+							<div id="household-size" class="col-md-12">
+								<h3>Household size</h3>
+								<div class="col-md-4">
+									<p>Size of household by age of household head</p>
+								</div>
+								<div class="col-md-12">
+									<div class="household_age"></div>
+								</div>
+							</div>
+					</div>
+				</div>
+
+				<!-- The gap finder will show areas that are lacking stories in terms of childrens issues and geographic locations - I built the table using this library http://www.dynatable.com/?perPage=20&queries[search]=Qatar#json-from-ajax -->
+				<div class="row">
+					<div id="GapFinder" class="col-md-12">
+						<div class="bg-info col-md-4 col-md-offset-4">
+							<h1>Gap Finder</h1>
+						</div>
+						<div class="col-md-8 col-md-offset-2">
+							<caption>
+									With the Gap Finder you can find geographic areas and issues that are not being covered in terms of children.
+							</caption>
+							<table id="gap-finder" class="table">
+								<thead>
+									<th>Province</th>
+									<th>Issue</th>
+								</thead>
+								<tbody>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!-- The MMA findinds for children in the media, they will go into a slideshow -->
+				<div class="row">
+					<div id="Findings" class="col-md-12">
+						<div class="bg-info col-md-4 col-md-offset-4">
+							<h1>Findings</h1>
+						</div>
+						<div id="slider">
+						</div>
+
+					</div>
+				</div>
+
+				<!-- The footer with links to our data sources as well as the MMA's contact information -->
+			<div class="row">
+				<div id="Footer" class="span12 panel-footer">
+					<div class="resources">
+						<h3>Resources</h3>
+							<p><a href="http://www.wazimap.co.za">WaziMap</a></p>
+							<p><a href="http://www.mediamonitoringafrica.org">Media Monitoring Africa</a></p>
+						</div>
+					<div class="contact">
+						<h3>Contact Us</h3>
+						<address>
+							<h5>Physical address</h5>
+								<p>
+									Suite no.2, 22 Art Centre<br>
+									6th Street<br>
+									Parkhurst (Johannesburg)<br>
+									South Africa<br>
+								</p>
+							<h5>Postal address</h5>
+							<p>
+								PO Box 1560<br>
+								Parklands 2121<br>
+								South Africa<br>
+							</p>
+							<p>
+								<b>Tel:</b> +27 (0) 11 788 1278<br>
+								<b>Fax:</b> +27 (0) 11 788 1289<br>
+								<b>Email:</b> info@mma.org.za<br>
+							</p>
+						</address>
+					</div>
+				</div>
+			</div>
+
+				<!-- I used the Google CDN for jQuery -->
+				<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+				<!-- Here are the links to the Bootstrap JavaScript files -->
+				<script type="text/javascript" src="dist/js/bootstrap.js"></script>
+
+				<!-- The libraries for the C3 charts -->
+				<script type="text/javascript" src="lib/d3.js"></script>
+				<script type="text/javascript" src="lib/c3.js"></script>
+
+				<!-- The Dynatable library I used for Gap Finder -->
+				<script type="text/javascript" src="lib/jquery.dynatable.js"></script>
+				
+				<!-- Link to my custom JavaScript file-->
+				<script type="text/javascript" src="lib/app.js"></script>
+			</body>
+	</html>
