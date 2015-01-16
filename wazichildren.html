@@ -25,9 +25,6 @@
 <div id="geos"></div>
 <div id="charts"></div>
 
-<iframe id="cr-embed-province-WC-children-school-education17_distribution" class="census-reporter-embed" src="http://embed.wazimap.co.za/static/iframe.html?geoID=province-WC&chartDataID=children-school-education17_distribution&chartType=column&chartHeight=200&chartQualifier=Universe%3A+17-year-old+children&chartTitle=17-year-olds+by+highest+educational+level&initialSort=&statType=scaled-percentage" frameborder="0" width="100%" height="300" style="margin: 1em; max-width: 720px;"></iframe>
-<script src="http://embed.wazimap.co.za/static/js/embed.chart.make.js"></script>
-
 <script type="text/x-handlebars-template" id="geography_select_template">
 	Geographies
 	<ul>
@@ -39,7 +36,7 @@
 
 <script type="text/x-handlebars-template" id="wazichildren_pie_graph">
 	<h1>{{ title }}</h1>
-	<iframe id="{{geoid}}_{{chartid}}" class="census-reporter-embed" src="http://embed.wazimap.co.za/static/iframe.html?geoID={{geoid}}&amp;chartDataID={{chartid}}&amp;chartType={{charttype}}&amp;chartHeight=200&amp;chartQualifier=Universe%3A+Children+5+to+17&amp;chartTitle=&initialSort=-&statType=percentage" frameborder="0" width="100%" height="300" style="margin: 1em; max-width: 720px;"></iframe>
+	<iframe id="{{geoid}}_{{chartid}}" class="census-reporter-embed" src="http://embed.wazimap.co.za/static/iframe.html?geoID={{geoid}}&amp;chartDataID={{chartid}}&amp;chartType={{charttype}}&amp;chartHeight=200&amp;chartQualifier=Universe%3A+Children+5+to+17&amp;chartTitle=&initialSort=-&statType={{#if scaled}}scaled-{{/if}}percentage" frameborder="0" width="100%" height="300" style="margin: 1em; max-width: 720px;"></iframe>
 	
 </script>
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
@@ -57,7 +54,7 @@
 		{ name: "Gender Distribution", chartid: "children-demographics-gender_distribution", charttype: "pie" },
 		{ name: "Parents", chartid: "children-demographics-child_adult_distribution", charttype: "pie" },
 		{ name: "School Attendance", chartid: "children-school-school_attendance_distribution", charttype: "pie" },
-		{ name: "17-year-olds by highest level of education", chartid: "children-school-education17_distribution", charttype: "column" },
+		{ name: "17-year-olds by highest level of education", chartid: "children-school-education17_distribution", charttype: "column", scaled: true },
 	];
 
 	var test = {
@@ -82,6 +79,7 @@
 				geoid: $(sender).attr("data-geoid"),
 				chartid: chart.chartid,
 				charttype: chart.charttype,
+				scaled: chart.scaled,
 			}
 			final_html.push(pie_template(data));
 			
