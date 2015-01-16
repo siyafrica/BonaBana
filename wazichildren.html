@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>WaziChildren</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+<!-- 	<h1>Child Population</h1>
+	<iframe id="cr-embed-municipality-CPT-children-demographics-gender_distribution" class="census-reporter-embed" src="http://embed.wazimap.co.za/static/iframe.html?geoID=province-WC&amp;chartDataID=children-demographics-gender_distribution&amp;chartType=pie&amp;chartHeight=200&amp;chartQualifier=Universe%3A+Children+under+18&amp;chartTitle=Children+under+18+by+gender&amp;initialSort=&amp;statType=percentage" frameborder="0" width="100%" height="300" style="margin: 1em; max-width: 300px;"></iframe>
+<script src="http://embed.wazimap.co.za/static/js/embed.chart.make.js"></script>
+
+<iframe id="cr-embed-province-WC-children-demographics-child_adult_distribution" class="census-reporter-embed" src="http://embed.wazimap.co.za/static/iframe.html?geoID=province-WC&chartDataID=children-demographics-child_adult_distribution&chartType=pie&chartHeight=200&chartQualifier=&chartTitle=Population+by+age+category&initialSort=&statType=percentage" frameborder="0" width="100%" height="300" style="margin: 1em; max-width: 300px;"></iframe>
+<script src="http://embed.wazimap.co.za/static/js/embed.chart.make.js"></script>
+
+<h1>Parents</h1>
+<iframe id="cr-embed-province-WC-children-demographics-parental_survival_distribution" class="census-reporter-embed" src="http://embed.wazimap.co.za/static/iframe.html?geoID=province-WC&chartDataID=children-demographics-parental_survival_distribution&chartType=pie&chartHeight=200&chartQualifier=Universe%3A+Children+14+and+under&chartTitle=Children+14+and+under+by+biological+parental+survival&initialSort=-value&statType=percentage" frameborder="0" width="100%" height="300" style="margin: 1em; max-width: 300px;"></iframe>
+<script src="http://embed.wazimap.co.za/static/js/embed.chart.make.js"></script>
+
+<h1>School Attendance</h1>
+<iframe id="cr-embed-province-WC-children-school-school_attendance_distribution" class="census-reporter-embed" src="http://embed.wazimap.co.za/static/iframe.html?geoID=province-WC&chartDataID=children-school-school_attendance_distribution&chartType=pie&chartHeight=200&chartQualifier=Universe%3A+Children+5+to+17&chartTitle=Children+5+to+17+by+school+attendance&initialSort=-value&statType=percentage" frameborder="0" width="100%" height="300" style="margin: 1em; max-width: 300px;"></iframe>
+<script src="http://embed.wazimap.co.za/static/js/embed.chart.make.js"></script> -->
+
+<div id="geos"></div>
+<div id="charts"></div>
+
+<iframe id="cr-embed-province-WC-children-school-education17_distribution" class="census-reporter-embed" src="http://embed.wazimap.co.za/static/iframe.html?geoID=province-WC&chartDataID=children-school-education17_distribution&chartType=column&chartHeight=200&chartQualifier=Universe%3A+17-year-old+children&chartTitle=17-year-olds+by+highest+educational+level&initialSort=&statType=scaled-percentage" frameborder="0" width="100%" height="300" style="margin: 1em; max-width: 720px;"></iframe>
+<script src="http://embed.wazimap.co.za/static/js/embed.chart.make.js"></script>
+
+<script type="text/x-handlebars-template" id="geography_select_template">
+	Geographies
+	<ul>
+	{{#each geos}}
+	<li><a href="#" class="geo" data-geoid="{{this.geoid}}" data-title="{{this.name}}">{{this.name}}</a></li>
+	{{/each}}
+	</ul>
+</script>
+
+<script type="text/x-handlebars-template" id="wazichildren_pie_graph">
+	<h1>{{ title }}</h1>
+	<iframe id="{{geoid}}_{{chartid}}" class="census-reporter-embed" src="http://embed.wazimap.co.za/static/iframe.html?geoID={{geoid}}&amp;chartDataID={{chartid}}&amp;chartType={{charttype}}&amp;chartHeight=200&amp;chartQualifier=Universe%3A+Children+5+to+17&amp;chartTitle=&initialSort=-&statType=percentage" frameborder="0" width="100%" height="300" style="margin: 1em; max-width: 720px;"></iframe>
+	
+</script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/handlebars/handlebars.min.js"></script>
+<script>
+
+	var geos = [
+		{ name: "Western Cape", geoid: "province-WC" },
+		{ name: "Northern Cape", geoid: "province-NC" },
+		{ name: "Gauteng", geoid: "province-GT" },
+	];
+
+	var charts = [
+		{ name: "School Attendance", chartid: "children-school-school_attendance_distribution", charttype: "pie" },
+		{ name: "Gender Distribution", chartid: "children-demographics-gender_distribution", charttype: "pie" },
+		{ name: "Parents", chartid: "children-demographics-child_adult_distribution", charttype: "pie" },
+		{ name: "School Attendance", chartid: "children-school-school_attendance_distribution", charttype: "pie" },
+		{ name: "17-year-olds by highest level of education", chartid: "children-school-education17_distribution", charttype: "column" },
+	];
+
+	var test = {
+		title: "Blah",
+		geoid: "province-WC",
+		chartid: "children-school-school_attendance_distribution"
+	}
+
+	var geo_template = Handlebars.compile($("#geography_select_template").html());
+	$("#geos").html(geo_template({ geos: geos }));
+
+	var pie_template = Handlebars.compile($("#wazichildren_pie_graph").html());
+	// var final_html = pie_template(test);
+	// $("#test").html(final_html);
+
+	$(".geo").on("click", function() {
+		var final_html = [];
+		var sender = this;
+		charts.forEach(function(chart) {
+			var data = {
+				title: $(sender).attr("data-title") + ": " + chart.name,
+				geoid: $(sender).attr("data-geoid"),
+				chartid: chart.chartid,
+				charttype: chart.charttype,
+			}
+			final_html.push(pie_template(data));
+			
+		});
+		console.log(final_html.join());
+		$("#charts").html(final_html.join());
+	});
+</script>
+
+
+
+</body>
+</html>
